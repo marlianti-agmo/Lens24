@@ -3,6 +3,9 @@ plugins {
     id 'com.vanniktech.maven.publish'
 }
 
+group = 'com.marlianti.lens24'
+version = '1.0.0'
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     ndkVersion = "26.3.11579264"
@@ -52,6 +55,15 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.constraintlayoutVersion"
     implementation "androidx.appcompat:appcompat:$rootProject.ext.appCompatVersion"
     implementation "com.airbnb.android:lottie:$rootProject.ext.lottieVersion"
+
+    configurations.all {
+        resolutionStrategy {
+            force "org.jetbrains.kotlin:kotlin-stdlib:1.8.22"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22"
+        }
+    }
+
 }
 
 mavenPublishing {
