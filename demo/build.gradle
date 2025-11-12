@@ -20,14 +20,10 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            resValue 'string', "adUnitId", adUnitId
-            resValue 'string', "adMobApiKey", adMobApiKey
         }
         debug {
             minifyEnabled false
             jniDebuggable true
-            resValue 'string', "adUnitId", adUnitIdDebug
-            resValue 'string', "adMobApiKey", adMobApiKeyDebug
         }
         profiling {
             initWith debug
@@ -48,5 +44,4 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$rootProject.ext.appCompatVersion"
     implementation "com.google.android.material:material:$rootProject.ext.materialVersion"
     implementation "com.airbnb.android:lottie:$rootProject.ext.lottieVersion"
-    implementation "com.google.android.gms:play-services-ads-lite:$rootProject.ext.adsVersion"
 }

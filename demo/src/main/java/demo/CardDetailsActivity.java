@@ -13,8 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.material.textfield.TextInputLayout;
 import demo.validation.CardExpiryDateValidator;
 import demo.validation.CardHolderValidator;
@@ -66,9 +64,6 @@ public class CardDetailsActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_card_details);
 
-        AdView mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         mToolbar = findViewById(R.id.lens24_toolbar);
         mCardNumberField = findViewById(R.id.card_number_field);
